@@ -12,12 +12,12 @@ export default function Home() {
             Join our community of creators and explore a vast
             library of user-submitted models.
           </p>
-          <button
-              href="/3d-models"
-              className="px-6 py-3 text-black transition duration-100 bg-white border-2 border-black hover:bg-black hover:text-white"
-            >
-              Browse Models
-          </button>
+          <a
+            href="/3d-models"
+            className="px-6 py-3 text-black transition duration-100 bg-white border-2 border-black hover:bg-black hover:text-white"
+          >
+            Browse Models
+          </a>
         </div>
         <Image src="/home-page-hero-img.png" alt="" width={350} height={350} />
       </section>
