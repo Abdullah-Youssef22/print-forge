@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function AboutPage() {
     return(
         <main>
-            <section className=" m-7">
+            <section className=" my-10">
                 <Image src="/hero-image-square.png" alt="" width={350} height={350} />
-                <div className="py-5">
+                <div className="py-8">
                     <h1 className="text-xl font-bold pb-4">Empowering Makers Worldwide</h1>
                     <p className="pb-3">Founded in 2023, PrintForge has quickly become
                         the go-to platform for 3D printing enthusiasts,
@@ -18,7 +18,7 @@ export default function AboutPage() {
                 </div>
             </section >
             
-            <section className="m-7 self-center">
+            <section className="my-10 self-center">
                 <hr className="my-8 border-gray-300" />
                 
                 <div className="flex flex-col px-2.5 md:flex-row md:divide-x md:divide-gray-300">
@@ -47,7 +47,7 @@ export default function AboutPage() {
                 <hr className="my-8 border-gray-300" />
             </section>
 
-            <section className=" m-7">
+            <section className=" my-10">
                 <h2  className="text-2xl font-bold md:text-3xl pb-4">
                     Our Vision
                 </h2>

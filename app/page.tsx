@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <section className="flex flex-col items-center justify-between gap-4 md:flex-row md:gap-8 max-w-7xl mx-auto">
-        <div className="flex flex-col gap-4 my-[50px] mx-[20px] md:w-1/2">
+        <div className="flex flex-col gap-4 my-[50px]  md:w-1/2">
           <p className="hidden text-sm uppercase md:flex">Your go-to platform for 3D printing files</p>
           <h1 className="text-4xl font-bold md:text-5xl ">Discover what&apos;s possible with 3D Printing</h1>
           <p className="text-lg text-gray-600 md:text-xl">
