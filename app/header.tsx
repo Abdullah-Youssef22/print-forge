@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import logo from "@/public/logo.svg"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,10 +17,10 @@ export default function Header(){
 
         <header className="flex justify-between" >
             <Image 
-            src="/logo.svg" 
-            alt="Logo" 
-            width={120} 
-            height={50} 
+                src={logo} 
+                alt="Logo" 
+                width={120} 
+                height={50} 
             />
             <nav className="flex gap-4 ">
                     {navLinks.map((link)=>{

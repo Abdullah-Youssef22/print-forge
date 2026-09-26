@@ -1,10 +1,14 @@
 import Image from "next/image";
+import About_img from "@/public/hero-image-square.png"
 
 export default function AboutPage() {
     return(
         <main>
             <section className=" my-10">
-                <Image src="/hero-image-square.png" alt="" width={350} height={350} />
+                <Image 
+                    src={About_img} alt="" 
+                    width={350} height={350} 
+                />
                 <div className="py-8">
                     <h1 className="text-xl font-bold pb-4">Empowering Makers Worldwide</h1>
                     <p className="pb-3">Founded in 2023, PrintForge has quickly become

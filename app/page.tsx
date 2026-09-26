@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-
+import Home_page_hero from "@/public/home-page-hero-img.png"
 export default function Home() {
   return (
     <main>
@@ -19,7 +19,9 @@ export default function Home() {
             Browse Models
           </a>
         </div>
-        <Image src="/home-page-hero-img.png" alt="" width={350} height={350} />
+        <Image
+        src={Home_page_hero} alt="" 
+        width={350} height={350} />
       </section>
     </main>
   );
