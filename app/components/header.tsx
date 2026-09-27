@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "3D Models", href: "/3d-models" },
   { name: "About", href: "/about" },
 ];
 
@@ -16,12 +16,15 @@ export default function Header(){
     return(
 
         <header className="flex justify-between" >
-            <Image 
-                src={logo} 
-                alt="Logo" 
-                width={120} 
-                height={50} 
-            />
+            <Link href="/">
+                <Image 
+                    src={logo} 
+                    alt="Logo" 
+                    width={120} 
+                    height={50} 
+                />
+            </Link>
+            
             <nav className="flex gap-4 ">
                     {navLinks.map((link)=>{
                         const isActive = pathname === link.href;
