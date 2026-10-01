@@ -8,10 +8,10 @@ import CatNav from "@/app/components/CatNavBar"
 
 export default function ModelsLayout({ children }: { children: ReactNode }) {
 
-  return (
-    <div className="relative flex flex-col min-h-screen md:flex-row">
-      <CatNav />
-      <main className="flex-1 p-4 md:ml-64">{children}</main>
-    </div>
-  )
+    return (
+        <div className="flex gap-[15px]">
+            <CatNav />
+            <main className="flex-1 min-w-0">{children}</main>
+        </div>
+    )
 }
