@@ -6,10 +6,8 @@ export function getAllCategories(): Category[] {
 }
 
 export function getCategoryBySlug(slug: string): Category {
-    const category = categories.find(c => c.slug === slug)
-    if (!category) {
-        throw new Error(`Category with slug ${slug} not found`)
-    }
+    const category = categories.find((c: Category) => c.slug === slug)
+    
     return category
 }
 
