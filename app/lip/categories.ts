@@ -1,5 +1,6 @@
 import categories from "../data/categories.json"
-import { Category } from "../types"
+import { Category } from "@/.next/types/myTypes"
+import { notFound } from 'next/navigation'
 
 export function getAllCategories(): Category[] {
     return categories
@@ -7,7 +8,11 @@ export function getAllCategories(): Category[] {
 
 export function getCategoryBySlug(slug: string): Category {
     const category = categories.find((c: Category) => c.slug === slug)
-    
+
+    if (!category) {
+        notFound()
+    }
+
     return category
 }
 

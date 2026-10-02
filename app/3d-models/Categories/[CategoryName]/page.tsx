@@ -1,4 +1,4 @@
-import type { CategoryPageProps } from "@/next/types/myTypes";
+import type { CategoryPageProps } from "@/.next/types/myTypes";
 import { getCategoryBySlug } from "@/app/lip/categories"
 import { getModels } from "@/app/lip/models"
 import ModelsGrid from "@/app/components/ModelsGrid"
@@ -10,5 +10,5 @@ export default async function CategoryPage({params}:CategoryPageProps){
     const models = await getModels({ category: categoryName })
     
 
-    return <ModelsGrid models={models} />
+    return <ModelsGrid title={category.displayName} models={models} />
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {getAllCategories} from "@/app/lip/categories"
 import type { ReactNode } from "react"
-import type { Category } from "@/app/types"
+import type { Category } from "@/.next/types/myTypes"
 
 export default function CatNav(){
     const pathname = usePathname();
