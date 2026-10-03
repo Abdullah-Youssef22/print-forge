@@ -12,3 +12,5 @@ export default async function CategoryPage({params}:CategoryPageProps){
 
     return <ModelsGrid title={category.displayName} models={models} />
 }
+
+// un known error is thrown when the category is not found, so we can use that to return a 404 page
