@@ -6,6 +6,7 @@ import type { ReactNode } from "react"
 import type { Category } from "@/.next/types/myTypes"
 import CatNav from "@/app/components/CatNavBar"
 
+
 export default function ModelsLayout({ children }: { children: ReactNode }) {
 
     return (
