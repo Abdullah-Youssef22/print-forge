@@ -25,7 +25,7 @@ async function seedModels() {
         image,
         category,
         dateAdded
-        ) VALUES (?, ?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?, ?, ?, ?)
     `)
 
     //loop through models and run the INSERT query for each one
@@ -40,4 +40,12 @@ async function seedModels() {
             model.dateAdded
         )
     }
+    await insertModel.finalize()  
+    await db.close()
+
+    console.log("Models table seeded")
 } 
+
+seedModels().catch((error) => {
+	console.error("Seeding failed:", error)
+})
