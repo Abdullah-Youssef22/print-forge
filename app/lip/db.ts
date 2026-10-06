@@ -3,7 +3,7 @@ import { open } from "sqlite";
 import path from "node:path";
 
 export async function getDBConnection() {
-    const dbPath = path.join(process.cwd(), "db", "lip.db");
+    const dbPath = path.join(process.cwd(),  'printforge.db');
     const db = await open({
         filename: dbPath,
         driver: sqlite3.Database,
