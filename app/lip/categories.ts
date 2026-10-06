@@ -1,22 +1,12 @@
-import categories from "../data/categories.json"
-import { Category } from "@/.next/types/myTypes"
-import { notFound } from 'next/navigation'
+import {getDBConnection} from '@/app/lip/db'
 
-export function getAllCategories(): Category[] {
-    return categories
-}
-
-export function getCategoryBySlug(slug: string): Category {
-    const category = categories.find((c: Category) => c.slug === slug)
-
-    if (!category) {
-        notFound()
+export async function getCategories() {
+    const db = await getDBConnection();
+    try {
+        return await db.all(`
+            SELECT * FROM categories
+        `)
+    } finally {
+        await db.close()
     }
-
-    return category
-}
-
-export function getDisplayNameFromSlug(slug: string): string {
-    const category = getCategoryBySlug(slug)
-    return category.displayName
 }
